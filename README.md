@@ -29,10 +29,8 @@ R1 ($50~\Omega$) and C1 (585fF) form the compensation network connected between 
 | P2   | Active Load PMOS                 | 500    | 5             | 12         | 6       |
 | P3   | Gain Stage PMOS                  | 250    | 5             | 100        | 6       |
 
-## Results
-We measured the performance of the proposed OTA using the parameters described in the following table
-
 ## OTA Performance Parameters
+We measured the performance of the proposed OTA using the parameters described in the following table
 
 | Parameter | Definition | Equation |
 |----------|------------|----------|
@@ -47,6 +45,7 @@ We measured the performance of the proposed OTA using the parameters described i
 | Total Harmonic Distortion (THD) | Ratio of harmonic power to fundamental | $\text{THD} = \frac{V_2 + V_3 + \dots}{V_1} \cdot 100%$ |
 | Input Common-Mode Range (ICMR) | Valid input common-mode voltage range | --- |
 
+## Corner Cases Tested
 To evaluate the robustness of the designed OTA, we tested it under a total of **90 corner cases**, including:
 
 **Process Variations (5 cases):**
@@ -69,3 +68,62 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 **Input Common-Mode Range (ICMR):**
 - $0.3V_\text{DD}$ to $0.8V_\text{DD}$
 
+
+## Pre-Layout Simulation Results
+
+**Table 1: Nominal Values and Process Variation before Layout**
+
+| Parameters | Nominal | FF | SS | FS | SF |
+|-----------|--------|----|----|----|----|
+| Gain (dB) | 61.82 | 61.25 | 62.43 | 61.79 | 61.72 |
+| UGB (MHz) | 137.2 | 157.4 | 114.8 | 143.1 | 125.1 |
+| Phase Margin (deg) | 60.48 | 55.93 | 63.86 | 56.2 | 63.88 |
+| PSRR (dB) | -64.43 | -63.94 | -65.15 | -65.2 | -63.73 |
+| Input Referred Noise (µV) | 915.1 | 926.9 | 889.3 | 869.2 | 982.3 |
+| Total Power (mW) | 5.945 | 5.935 | 5.952 | 6.184 | 6.184 |
+| Slew Rate (V/µs) | 120.6 | 136.8 | 106.7 | 118.4 | 120.6 |
+| Offset (µV) | -74.5 | -164 | 37.41 | -173.5 | 41.54 |
+
+---
+
+**Table 2: Supply Voltage Variation before Layout**
+
+| Parameters | VDD-10% | VDD+10% |
+|-----------|----------|----------|
+| Gain (dB) | 61.79 | 61.83 |
+| UGB (MHz) | 135.4 | 138.8 |
+| Phase Margin (deg) | 60.36 | 60.58 |
+| PSRR (dB) | -64.33 | -64.48 |
+| Input Referred Noise (µV) | 920.9 | 911.5 |
+| Total Power (mW) | 5.251 | 6.653 |
+| Slew Rate (V/µs) | 113.8 | 122.4 |
+| Offset (µV) | -164.8 | -278.5 |
+
+---
+
+**Table 3: Temperature Variation before Layout**
+
+| Parameters | -40°C | 125°C |
+|-----------|--------|--------|
+| Gain (dB) | 61.2 | 61.5 |
+| UGB (MHz) | 161.8 | 112.4 |
+| Phase Margin (deg) | 62.35 | 59.92 |
+| PSRR (dB) | -63.72 | -64.22 |
+| Input Referred Noise (µV) | 844.1 | 1002 |
+| Total Power (mW) | 5.777 | 6.062 |
+| Slew Rate (V/µs) | 122.9 | 118.1 |
+| Offset (µV) | -219.6 | 78.61 |
+
+---
+
+**Table 4: ICMR Variation before Layout**
+
+| Parameters | 0.3 × VDD | 0.8 × VDD |
+|-----------|-----------|-----------|
+| Gain (dB) | 62.11 | 59.91 |
+| UGB (MHz) | 113.8 | 141.5 |
+| Phase Margin (deg) | 59.2 | 60.79 |
+| PSRR (dB) | -64.02 | -59.37 |
+| Input Referred Noise (µV) | 948.2 | 857.7 |
+| Total Power (mW) | 5.419 | 6.079 |
+| Offset (µV) | -108.3 | -42.55 |
