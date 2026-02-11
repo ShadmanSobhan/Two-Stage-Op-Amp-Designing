@@ -138,4 +138,4 @@ The total area required for the layout is approximately 0.01566 mm².
 
 **Figure 3: Placement of the MOSFETs**
 
-<img src="Images/Layout_Split.png" width="500">
+<img src="Images/Layout_Split.png" width="750">
