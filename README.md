@@ -46,3 +46,26 @@ We measured the performance of the proposed OTA using the parameters described i
 | Offset Voltage (Vos) | Input voltage required to make output zero | $V_\text{os} = V_\text{in}^+ - V_\text{in}^-$ |
 | Total Harmonic Distortion (THD) | Ratio of harmonic power to fundamental | $\text{THD} = \frac{V_2 + V_3 + \dots}{V_1} \cdot 100%$ |
 | Input Common-Mode Range (ICMR) | Valid input common-mode voltage range | --- |
+
+To evaluate the robustness of the designed OTA, we tested it under a total of **90 corner cases**, including:
+
+**Process Variations (5 cases):**
+- FF: Fast NMOS / Fast PMOS
+- FS: Fast NMOS / Slow PMOS
+- SF: Slow NMOS / Fast PMOS
+- SS: Slow NMOS / Slow PMOS
+- NN: Nominal NMOS / Nominal PMOS
+
+**Voltage Variations (3 cases):**
+- Typical: $V_\text{DD} = 1~\text{V}$
+- Low: $V_\text{DD} = 0.9~\text{V}$
+- High: $V_\text{DD} = 1.1~\text{V}$
+
+**Temperature Variations (3 cases):**
+- Very low: $-40^\circ\text{C}$
+- Nominal: $25^\circ\text{C}$
+- Extremely high: $125^\circ\text{C}$
+
+**Input Common-Mode Range (ICMR):**
+- $0.3~V_\text{DD}$ to $0.8~V_\text{DD}$
+
