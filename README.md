@@ -139,3 +139,80 @@ The total area required for the layout is approximately 0.01566 mm².
 **Figure 3: Placement of the MOSFETs**
 
 <img src="Images/Layout_Split.png" width="1500">
+
+## Post-Layout Simulation & Comparison of Before and After PEX
+
+**Table 7: Nominal Values and Process Variation after PEX Simulation**
+
+| Parameters | Nominal | FF | SS | FS | SF |
+|-----------|--------|----|----|----|----|
+| Gain (dB) | 61.43 | 60.78 | 62.3 | 61.48 | 61.23 |
+| UGB (MHz) | 135.1 | 153.1 | 113.9 | 140.5 | 123.3 |
+| Phase Margin (deg) | 57.7 | 52.45 | 61.81 | 53.26 | 61.4 |
+| PSRR (dB) | -64.77 | -64.25 | -65.53 | -66.01 | -63.75 |
+| Input Referred Noise (V) | 1.049 | 1.084 | 1.019 | 1.033 | 1.091 |
+| Total Power (mW) | 6.173 | 6.272 | 6.041 | 6.308 | 6.014 |
+| Slew Rate (V/µs) | 118.6 | 134.4 | 104.6 | 117.7 | 117 |
+| Offset (µV) | 409.6 | 357.4 | 476.5 | 505.3 | 339.4 |
+
+---
+
+**Table 8: Supply Voltage Variation after PEX Simulation**
+
+| Parameters | VDD-10% | VDD+10% |
+|-----------|----------|----------|
+| Gain (dB) | 61.4 | 61.44 |
+| UGB (MHz) | 133.2 | 136.7 |
+| Phase Margin (deg) | 57.6 | 57.78 |
+| PSRR (dB) | -64.82 | -64.73 |
+| Input Referred Noise (V) | 1.058 | 1.043 |
+| Total Power (mW) | 5.456 | 6.906 |
+| Slew Rate (V/µs) | 109.1 | 121.5 |
+| Offset (µV) | 367.4 | 448.8 |
+
+---
+
+**Table 9: Temperature Variation after PEX Simulation**
+
+| Parameters | -40°C | 125°C |
+|-----------|--------|--------|
+| Gain (dB) | 60.91 | 60.62 |
+| UGB (MHz) | 160.4 | 110 |
+| Phase Margin (deg) | 58.86 | 57.73 |
+| PSRR (dB) | -64.21 | -64.04 |
+| Input Referred Noise (V) | 0.939 | 1.199 |
+| Total Power (mW) | 6.157 | 6.119 |
+| Slew Rate (V/µs) | 121.4 | 115.4 |
+| Offset (µV) | 278.7 | 610.5 |
+
+---
+
+**Table 10: ICMR Variation after PEX Simulation**
+
+| Parameters | 0.3 × VDD | 0.8 × VDD |
+|-----------|-----------|-----------|
+| Gain (dB) | 61.81 | 61.43 |
+| UGB (MHz) | 106.6 | 135.1 |
+| Phase Margin (deg) | 56.96 | 57.7 |
+| PSRR (dB) | -63.65 | -70.38 |
+| Input Referred Noise (V) | 1.073 | 0.991 |
+| Total Power (mW) | 5.586 | 6.244 |
+| Offset (µV) | 107.4 | 295.9 |
+
+**Table 11: Performance Comparison Before and After PEX**
+
+| Parameters | Pre-Layout Minimum | Pre-Layout Maximum | Post-Layout Minimum | Post-Layout Maximum |
+|-----------|------------------|------------------|-------------------|-------------------|
+| Gain (dB) | 56.56 | 62.8 | 54.3 | 62.45 |
+| UGB (MHz) | 51.15 | 198.1 | 48.11 | 192.5 |
+| Phase Margin (Degrees) | 55.1 | 66.39 | 52.61 | 63.41 |
+| Power Supply Rejection Ratio (PSRR) (dB) | -64.38 | -56.25 | -80.19 | -43.78 |
+| Input Referred Noise (µV) | 739.1 | 1077 | 846 | 1279 |
+| Slew Rate (V/µs) | 94.85 | 141.3 | 88.56 | 141.3 |
+| Source Voltage Power (mW) | 2.233 | 6.403 | 2.361 | 6.75 |
+| Current Source Power (µW) | 347.1 | 519.8 | 344.8 | 517.5 |
+| Total Power (mW) | 2.581 | 6.923 | 2.706 | 7.258 |
+| Offset Voltage (µV) | -819.1 | 96.63 | -770.9 | 804.9 |
+| Total Harmonic Distortion (%) | 0.08695 | 1.86 | 0.1974 | 1.742 |
+
+
