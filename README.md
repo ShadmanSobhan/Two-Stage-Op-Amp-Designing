@@ -16,7 +16,7 @@ P3 (PMOS) acts as a common-source amplifier driven by the first stage. N3 (NMOS)
 
 R1 ($50~\Omega$) and C1 (585fF) form the compensation network connected between the output and the intermediate node. This creates a dominant pole to ensure stability by moving the dominant pole to lower frequencies, introducing a zero (nulling resistor R1) to cancel the RHP zero. C2 (10pF) represents the load capacitance that the OTA must drive.
 
-### Transistor Dimensions
+**Table 1: Transistor Dimensions**
 
 | Name | Purpose                          | L (nm) | W_finger (um) | Multiplier | Fingers |
 |------|----------------------------------|--------|---------------|------------|---------|
@@ -29,8 +29,7 @@ R1 ($50~\Omega$) and C1 (585fF) form the compensation network connected between 
 | P2   | Active Load PMOS                 | 500    | 5             | 12         | 6       |
 | P3   | Gain Stage PMOS                  | 250    | 5             | 100        | 6       |
 
-## OTA Performance Parameters
-We measured the performance of the proposed OTA using the parameters described in the following table
+**Table 2: OTA Performance Parameters**
 
 | Parameter | Definition | Equation |
 |----------|------------|----------|
@@ -71,7 +70,7 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 
 ## Pre-Layout Simulation Results
 
-**Table 1: Nominal Values and Process Variation before Layout**
+**Table 3: Nominal Values and Process Variation before Layout**
 
 | Parameters | Nominal | FF | SS | FS | SF |
 |-----------|--------|----|----|----|----|
@@ -86,7 +85,7 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 
 ---
 
-**Table 2: Supply Voltage Variation before Layout**
+**Table 4: Supply Voltage Variation before Layout**
 
 | Parameters | VDD-10% | VDD+10% |
 |-----------|----------|----------|
@@ -101,7 +100,7 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 
 ---
 
-**Table 3: Temperature Variation before Layout**
+**Table 5: Temperature Variation before Layout**
 
 | Parameters | -40°C | 125°C |
 |-----------|--------|--------|
@@ -116,7 +115,7 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 
 ---
 
-**Table 4: ICMR Variation before Layout**
+**Table 6: ICMR Variation before Layout**
 
 | Parameters | 0.3 × VDD | 0.8 × VDD |
 |-----------|-----------|-----------|
@@ -127,3 +126,9 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 | Input Referred Noise (µV) | 948.2 | 857.7 |
 | Total Power (mW) | 5.419 | 6.079 |
 | Offset (µV) | -108.3 | -42.55 |
+
+## Layout
+
+The layout of the designed OTA is illustrated in the following figure:
+
+<img src="Images/Layout.png" width="500">
