@@ -36,7 +36,7 @@ We measured the performance of the proposed OTA using the parameters described i
 
 | Parameter | Definition | Equation |
 |----------|------------|----------|
-| Gain (Av) | Ratio of output voltage change to input voltage change | Av = Vout / Vin |
+| Gain (Av) | Ratio of output voltage change to input voltage change | $A_v = \frac{V_\text{out}}{V_\text{in}}$ |
 | Unity-Gain Bandwidth (UGB) | Frequency where gain becomes 1; determines speed | ft ~= gm / CL |
 | Phase Margin (PM) | Measure of feedback stability | PM = 180 + phase(open-loop) |
 | Power Supply Rejection Ratio (PSRR) | Ability to reject supply variations | PSRR = dVDD / dVout |
