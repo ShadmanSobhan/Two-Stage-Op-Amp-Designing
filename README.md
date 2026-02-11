@@ -5,7 +5,7 @@ In this repository, the basic theory, design, layout, and results of two stage d
 
 **Figure 1: Circuit Design**
 
-<img src="Images/OTA Design.png" width="500">
+<img src="Images/OTA Design.png" width="1000">
 
 The OTA uses current mirror techniques, differential pairs with PMOS as the active load, Miller Compensation, a 600 µA current source, a supply voltage of $1V \pm 10\%$, and a common-source output stage.
 
@@ -134,8 +134,8 @@ The total area required for the layout is approximately 0.01566 mm².
 
 **Figure 2: Layout of the Designed OTA**
 
-<img src="Images/Layout.png" width="500">
+<img src="Images/Layout.png" width="1000">
 
 **Figure 3: Placement of the MOSFETs**
 
-<img src="Images/Layout_Split.png" width="750">
+<img src="Images/Layout_Split.png" width="1500">
