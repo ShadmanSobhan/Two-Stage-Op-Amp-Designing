@@ -67,5 +67,5 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 - Extremely high: $125^\circ\text{C}$
 
 **Input Common-Mode Range (ICMR):**
-- $0.3~V_\text{DD}$ to $0.8~V_\text{DD}$
+- 0.3V_DD to 0.8V_DD
 
