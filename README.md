@@ -10,7 +10,7 @@ The OTA uses current mirror techniques, differential pairs with PMOS as the acti
 
 The current source I1 flows through the diode-connected transistor N1, creating a reference voltage. This voltage is mirrored to N2, which provides a stable tail current for the differential pair (N4, N5).
 
-N4 and N5 form an NMOS differential pair that converts the differential input voltage (Input$^{+}$ - Input$^{-}$) into differential currents. P1 and P2 form a PMOS current mirror active load, converting the differential currents into a single-ended output current. This stage provides high gain and converts voltage to current (transconductance, $g_{m}$).
+N4 and N5 form an NMOS differential pair that converts the differential input voltage (Input^+ - Input^-) into differential currents. P1 and P2 form a PMOS current mirror active load, converting the differential currents into a single-ended output current. This stage provides high gain and converts voltage to current (transconductance, $g_{m}$).
 
 P3 (PMOS) acts as a common-source amplifier driven by the first stage. N3 (NMOS) serves as the current source load for P3. This stage provides additional voltage gain and drives the output load.
 
