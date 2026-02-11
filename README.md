@@ -4,29 +4,18 @@ In this repository, the basic theory, design, layout, and results of two stage d
 ## Design
 The design of our proposed OTA is shown in the following figure.
 
-The designed Operational Transconductance Amplifier (OTA) employs:
+The OTA uses current mirror techniques, differential pairs with PMOS as the active load, Miller Compensation, a 600 \textmu A current source, a supply voltage of $1V \pm 10\%$, and a common-source output stage.
 
-Current mirror biasing
+## Transistor Dimensions
 
-Differential input pair with PMOS active load
+| Name | Purpose                          | L (nm) | W_finger (um) | Multiplier | Fingers |
+|------|----------------------------------|--------|---------------|------------|---------|
+| N1   | Current Mirror                   | 500    | 5             | 8          | 6       |
+| N2   | Tail Current Source              | 500    | 5             | 12         | 6       |
+| N3   | Gain Stage NMOS                  | 500    | 5             | 52         | 6       |
+| N4   | Input Differential Pair (-)      | 500    | 5             | 12         | 6       |
+| N5   | Input Differential Pair (+)      | 500    | 5             | 12         | 6       |
+| P1   | Active Load PMOS                 | 500    | 5             | 12         | 6       |
+| P2   | Active Load PMOS                 | 500    | 5             | 12         | 6       |
+| P3   | Gain Stage PMOS                  | 250    | 5             | 100        | 6       |
 
-Miller compensation for stability
-
-600 µA bias current source
-
-Low-voltage operation: 1 V±10%
-
-Common-source output stage
-
-The MOSFET devices used in the design, along with their sizing parameters, are listed below.
-
-MOSFET Sizing
-Name	Purpose	Length	Finger Width	Multiplier	Fingers
-N1	Current Mirror	500 nm	5 µm	8	6
-N2	Tail Current Source	500 nm	5 µm	12	6
-N3	Gain Stage NMOS	500 nm	5 µm	52	6
-N4	Input Differential Pair (−)	500 nm	5 µm	12	6
-N5	Input Differential Pair (+)	500 nm	5 µm	12	6
-P1	Active Load	500 nm	5 µm	12	6
-P2	Active Load	500 nm	5 µm	12	6
-P3	Gain Stage PMOS	250 nm	5 µm	100	6
