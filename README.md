@@ -37,12 +37,12 @@ We measured the performance of the proposed OTA using the parameters described i
 | Parameter | Definition | Equation |
 |----------|------------|----------|
 | Gain (Av) | Ratio of output voltage change to input voltage change | $A_v = \frac{V_\text{out}}{V_\text{in}}$ |
-| Unity-Gain Bandwidth (UGB) | Frequency where gain becomes 1; determines speed | ft ~= gm / CL |
-| Phase Margin (PM) | Measure of feedback stability | PM = 180 + phase(open-loop) |
-| Power Supply Rejection Ratio (PSRR) | Ability to reject supply variations | PSRR = dVDD / dVout |
-| Input-Referred Noise (vn) | Equivalent input noise producing observed output noise | vn ~= Vout_noise / Av |
-| Slew Rate (SR) | Maximum rate of change of output voltage | SR = dVout / dt |
-| Power Consumption | Total power used by OTA | P = VDD * IDD |
-| Offset Voltage (Vos) | Input voltage required to make output zero | Vos = Vin+ - Vin- |
-| Total Harmonic Distortion (THD) | Ratio of harmonic power to fundamental | THD = (V2 + V3 + ...)/V1 * 100% |
+| Unity-Gain Bandwidth (UGB) | Frequency where gain becomes 1; determines speed | $f_t \approx \frac{g_m}{C_L}$ |
+| Phase Margin (PM) | Measure of feedback stability | $\text{PM} = 180^\circ + \text{phase(open-loop)}$ |
+| Power Supply Rejection Ratio (PSRR) | Ability to reject supply variations | $\text{PSRR} = \frac{dV_\text{DD}}{dV_\text{out}}$ |
+| Input-Referred Noise (vn) | Equivalent input noise producing observed output noise | $v_n \approx \frac{V_\text{out,noise}}{A_v}$ |
+| Slew Rate (SR) | Maximum rate of change of output voltage | $\text{SR} = \frac{dV_\text{out}}{dt}$ |
+| Power Consumption | Total power used by OTA | $P = V_\text{DD} \cdot I_\text{DD}$ |
+| Offset Voltage (Vos) | Input voltage required to make output zero | $V_\text{os} = V_\text{in}^+ - V_\text{in}^-$ |
+| Total Harmonic Distortion (THD) | Ratio of harmonic power to fundamental | $\text{THD} = \frac{V_2 + V_3 + \dots}{V_1} \cdot 100%$ |
 | Input Common-Mode Range (ICMR) | Valid input common-mode voltage range | --- |
