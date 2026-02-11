@@ -16,7 +16,7 @@ P3 (PMOS) acts as a common-source amplifier driven by the first stage. N3 (NMOS)
 
 R1 ($50~\Omega$) and C1 (585fF) form the compensation network connected between the output and the intermediate node. This creates a dominant pole to ensure stability by moving the dominant pole to lower frequencies, introducing a zero (nulling resistor R1) to cancel the RHP zero. C2 (10pF) represents the load capacitance that the OTA must drive.
 
-## Transistor Dimensions
+### Transistor Dimensions
 
 | Name | Purpose                          | L (nm) | W_finger (um) | Multiplier | Fingers |
 |------|----------------------------------|--------|---------------|------------|---------|
@@ -29,3 +29,20 @@ R1 ($50~\Omega$) and C1 (585fF) form the compensation network connected between 
 | P2   | Active Load PMOS                 | 500    | 5             | 12         | 6       |
 | P3   | Gain Stage PMOS                  | 250    | 5             | 100        | 6       |
 
+## Results
+We measured the performance of the proposed OTA using the parameters described in the following table
+
+## OTA Performance Parameters
+
+| Parameter | Definition | Equation |
+|----------|------------|----------|
+| Gain (Av) | Ratio of output voltage change to input voltage change | Av = Vout / Vin |
+| Unity-Gain Bandwidth (UGB) | Frequency where gain becomes 1; determines speed | ft ~= gm / CL |
+| Phase Margin (PM) | Measure of feedback stability | PM = 180 + phase(open-loop) |
+| Power Supply Rejection Ratio (PSRR) | Ability to reject supply variations | PSRR = dVDD / dVout |
+| Input-Referred Noise (vn) | Equivalent input noise producing observed output noise | vn ~= Vout_noise / Av |
+| Slew Rate (SR) | Maximum rate of change of output voltage | SR = dVout / dt |
+| Power Consumption | Total power used by OTA | P = VDD * IDD |
+| Offset Voltage (Vos) | Input voltage required to make output zero | Vos = Vin+ - Vin- |
+| Total Harmonic Distortion (THD) | Ratio of harmonic power to fundamental | THD = (V2 + V3 + ...)/V1 * 100% |
+| Input Common-Mode Range (ICMR) | Valid input common-mode voltage range | --- |
