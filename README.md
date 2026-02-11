@@ -215,4 +215,33 @@ The total area required for the layout is approximately 0.01566 mm².
 | Offset Voltage (µV) | -819.1 | 96.63 | -770.9 | 804.9 |
 | Total Harmonic Distortion (%) | 0.08695 | 1.86 | 0.1974 | 1.742 |
 
+## Application of the Designed OTA
+In this study, we considered mainly 10 parameters. Some results were satisfactory, while others were less optimal due to trade-offs. Our main design goal for this OTA was to achieve satisfactory gain, UGB, low noise, and THD while maintaining stability and a high phase margin.
+
+The gain, slew rate, stability, THD, and PSRR achieved across all corners are good for an OTA. The average UGB is 100–150 MHz, but in some corners, the UGB became too high or too low. For example, in the SS corner at `-125°C`, the UGB measured `48.11 MHz` after PEX simulation. However, this is still acceptable as the OTA is designed for a `10 MS/s` SAR ADC.
+
+For an `N`-bit SAR ADC with full-scale `V_FS = 1 V`, the LSB size is:
+`LSB_N = V_FS / 2^N`
+
+Hence:  
+- `LSB_8 = 1 / 256 ≈ 3.906 mV`  
+- `LSB_9 = 1 / 512 ≈ 1.953 mV`  
+- `LSB_10 = 1 / 1024 ≈ 0.9766 mV`  
+
+The measured post-layout input-referred noise of the OTA is between `846 µV` and `1279 µV`, which corresponds approximately to:  
+- `0.22–0.33 LSB` for 8-bit  
+- `0.43–0.66 LSB` for 9-bit  
+- `0.87–1.31 LSB` for 10-bit operation  
+
+Therefore, the OTA noise is comfortably low for 8-bit, acceptable for 9-bit SAR operation, but marginal-to-exceeding the 1-LSB budget at 10 bits (worst-case > 1 LSB).
+
+To maintain high gain and UGB at low supply voltage, a high current was required to drive a `10 pF` load. This increased the required power for OTA operation, which is on average `3.5–5 mW`. One of the key design trade-offs is this higher power requirement.
+
+The achieved offset voltage, which ranges up to approximately `±0.8 mV` across process, voltage, and temperature (PVT) variations, corresponds roughly to:  
+- `0.2 LSB` for 8-bit  
+- `0.4 LSB` for 9-bit  
+- `0.8 LSB` for 10-bit resolutions  
+
+This level of offset is negligible for 8-bit operation, acceptable for 9-bit accuracy, but borderline for 10-bit systems.
+
 
