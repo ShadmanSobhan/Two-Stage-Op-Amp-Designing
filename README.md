@@ -2,7 +2,8 @@
 In this repository, the basic theory, design, layout, and results of two stage differential Op-Amp are discussed.
 
 ## Design
-The design of our proposed OTA is shown in the following figure.
+
+**Figure 1: Circuit Design**
 
 <img src="Images/OTA Design.png" width="500">
 
@@ -129,6 +130,12 @@ To evaluate the robustness of the designed OTA, we tested it under a total of **
 
 ## Layout
 
-The layout of the designed OTA is illustrated in the following figure:
+The total area required for the layout is approximately 0.01566 mm².
+
+**Figure 2: Layout of the Designed OTA**
 
 <img src="Images/Layout.png" width="500">
+
+**Figure 3: Placement of the MOSFETs**
+
+<img src="Images/Layout_Split.png" width="500">
