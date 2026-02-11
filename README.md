@@ -4,6 +4,8 @@ In this repository, the basic theory, design, layout, and results of two stage d
 ## Design
 The design of our proposed OTA is shown in the following figure.
 
+<img src="Images/OTA Design.png" width="500">
+
 The OTA uses current mirror techniques, differential pairs with PMOS as the active load, Miller Compensation, a 600 µA current source, a supply voltage of $1V \pm 10\%$, and a common-source output stage.
 
 The current source I1 flows through the diode-connected transistor N1, creating a reference voltage. This voltage is mirrored to N2, which provides a stable tail current for the differential pair (N4, N5).
